@@ -10,9 +10,12 @@ app.set('port', port[0])
 
 
 app.get('/', (req,res) => {
-    res.end('hello')
+  res.end('hello')
 })
 
+app.post('/auth', (req,res) => {
+	console.log(req.body)
+})
 
 app.listen(app.get('port'), () => {
     console.log(`[ OK ] :: Server is running on port ${port}!`)
